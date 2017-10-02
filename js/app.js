@@ -6,11 +6,20 @@ contactGallery.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'views/login.html',
             controller: 'loginController'
         })
+        .when('/add', {
+            templateUrl: 'views/add-contact.html',
+            controller: 'addContactController'
+        })
         .when('/gallery', {
-            templateUrl: 'views/gallery.html',
+            templateUrl: 'views/contacts-gallery.html',
             controller: 'galleryController'
         });
     $locationProvider.hashPrefix('');
 
 });
 
+//rootscope
+
+contactGallery.run(function($rootScope) {
+
+});

@@ -1,3 +1,3 @@
-contactGallery.controller('galleryController', ['$scope', function () {
-    console.log('gallery');
+contactGallery.controller('galleryController', ['$scope','$rootScope' , function ($scope , $rootScope) {
+
 }]);

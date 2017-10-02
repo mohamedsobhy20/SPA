@@ -1,4 +1,4 @@
-contactGallery.controller('loginController', ['$scope', '$timeout','$location', function ($scope, $timeout,$location,$locationProvider) {
+contactGallery.controller('loginController', ['$scope', '$timeout','$location', function ($scope, $timeout,$location) {
     $scope.login = {
         userName: '',
         password: ''
@@ -41,22 +41,22 @@ contactGallery.controller('loginController', ['$scope', '$timeout','$location', 
 
 
     function loginAuth() {
-        var contactsData = {
+        var adminsData = {
 
-            contact1: {
+            admin1: {
                 name: "admin@mail.com",
                 pass: "admin"
             },
 
-            contact2: {
+            admin2: {
                 name: "sobhy@mail.com",
                 pass: "sobhy"
             }
 
         };
 
-        for ( var contact in contactsData ){
-            if ($scope.login.userName == contactsData[contact].name && $scope.login.password == contactsData[contact].pass){
+        for ( var admin in adminsData ){
+            if ($scope.login.userName == adminsData[admin].name && $scope.login.password == adminsData[admin].pass){
                 $location.url('/gallery');
 
             }
