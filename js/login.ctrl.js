@@ -1,4 +1,4 @@
-contactGallery.controller('loginController', ['$scope', '$timeout','$location', function ($scope, $timeout,$location) {
+contactGallery.controller('loginController', ['$scope', '$timeout','$location', function ($scope, $timeout,$location,$locationProvider) {
     $scope.login = {
         userName: '',
         password: ''
@@ -57,7 +57,8 @@ contactGallery.controller('loginController', ['$scope', '$timeout','$location', 
 
         for ( var contact in contactsData ){
             if ($scope.login.userName == contactsData[contact].name && $scope.login.password == contactsData[contact].pass){
-                $location.path('#/gallery');
+                $location.url('/gallery');
+
             }
         }
 

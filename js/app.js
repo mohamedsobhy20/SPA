@@ -7,7 +7,7 @@ contactGallery.config(function ($routeProvider, $locationProvider) {
             controller: 'loginController'
         })
         .when('/gallery', {
-            emplateUrl: 'views/gallery.html',
+            templateUrl: 'views/gallery.html',
             controller: 'galleryController'
         });
     $locationProvider.hashPrefix('');
